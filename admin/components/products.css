@@ -1,0 +1,110 @@
+.products-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.products-page .products-page-header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.products-page-header .product-searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background-color: rgba(241, 241, 241, 0.526);
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+.products-page-header .product-searchbar img{
+    width: 20px;
+}
+.products-page-header .product-searchbar input{
+    background-color: rgba(241, 241, 241, 0.526);
+    border: none;
+    outline: none;
+    width: 15vw;
+}
+
+.products-page .products-page-header{
+    height: 60px;
+}
+.prod-list-header{
+    display: flex;
+    justify-content: space-between;
+}
+.prod-list-header img{
+    cursor: pointer;
+}
+.products-page .products-page-content{
+    height: calc(100vh - 60px);
+}
+.products-page .products-page-content{
+    margin: 20px;
+    padding: 20px;
+
+    background-color: white;
+    border: 1px solid rgba(160, 160, 160, 0.474);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    overflow-y: auto;
+}
+
+
+/* Table Styling */
+.products-page .product-list {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.product-list tr{
+    cursor: pointer;
+}
+
+.products-page .product-list th,
+.products-page .product-list td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.products-page .product-list th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #333;
+}
+
+.products-page .product-list tr:hover {
+    background-color: #f9f9f9;
+}
+
+.products-page .product-list .product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.products-page .product-list .product img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.products-page .product-list td p {
+    margin: 0;
+    font-weight: 500;
+    color: #222;
+}

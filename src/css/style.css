@@ -1,0 +1,431 @@
+/* Font: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Font: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root {
+    --header-bg-color: #cf102d;
+    --header-font: 'Poppins', serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigate to Admin */
+#navigate-to-admin {
+    display: block;
+    width: 100vw;
+    height: 40px;
+    background-color: rgb(16, 14, 9);
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* h-top */
+.h-top {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 0px 20px;
+    width: 100%;
+    height: 82px;
+    background-color: var(--header-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: var(--header-font);
+}
+/* h-top -> a */
+.h-top a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.h-top h1 {
+    margin-left: 15px;
+    margin-right: auto;
+    color: white;
+}
+/* h-top -> top-middle */
+.h-top .top-middle {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.h-top .top-middle .searchbar {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.01s linear;
+}
+.searchbar input {
+    width: 30vw;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.searchbar input, img {
+    height: 100%;
+}
+#cart {
+    height: 40px;
+}
+/* h-top -> main-nav */
+.h-top nav {
+    margin-right: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 10px 15px;
+    transition: all 0.01s linear;
+}
+.h-top nav ul li a:hover {
+    background-color: white;
+    color: var(--header-bg-color);
+    border-radius: 20px;
+}
+/* h-top -> main-nav -> profile */
+nav ul li .profile_a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: background-color 0.1s linear, border-radius 0.1s linear, filter 0.01s linear;
+}
+nav ul li .profile_a:hover {
+    background-color: white;
+    border-radius: 50%;
+}
+nav ul li a #profile {
+    width: 32px;
+}
+nav ul li .profile_a:hover #profile {
+    filter: invert(15%);
+}
+
+/* h-bottom (header) */
+header {
+    background-color: var(--header-bg-color);
+}
+.h-bottom #nav-item-list {
+    width: 100%;
+    margin-right: 40px;
+}
+
+.h-bottom #nav-item-list ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 8px;
+}
+
+.h-bottom #nav-item-list ul li {
+    margin: 0;
+    box-sizing: border-box;
+    flex: 1;
+    text-align: center;
+}
+
+.h-bottom #nav-item-list ul li a {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+    font-weight: 450;
+    width: 100%;
+
+    display: block;
+}
+/* Underline Effect on hover */
+#nav-item-list li > a{
+    display: block; 
+    position: relative;
+}
+#nav-item-list li > a::after{
+    content: '';
+    width: 100%;
+    background-color: #d5f9fa;
+    height: 2px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+#nav-item-list li:hover > a::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Main */
+main{
+    display: flex;
+    flex-direction: column;
+}
+/* Main -> Section */
+section{
+    background-color: #F8F8FD;
+
+    position: relative;
+}
+section::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 5px;
+    background-color: orange;
+}
+section h2{
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 30px;
+    font-family: var(--header-font);
+    font-weight: 630;
+}
+
+
+/* Slider */
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 90vw;
+    margin: auto;
+    gap: 20px;
+}
+/* Slider -> Card-Container */
+.card-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    grid-auto-flow: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 15px 20px;
+
+    /* Slider */
+    overflow: hidden;
+}
+.card-container > img{
+    width: 50px;
+    height: auto;
+    margin: auto;
+}
+/* Slider -> Card-Container -> Card */
+.card {
+    width: 230px;
+    height: 348px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+                0 6px 20px rgba(0, 0, 0, 0.19);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.card:hover {
+    transform: scale(1.03);
+}
+/* Slider -> Card-Container -> Card -> Card-info */
+.card .card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* Slider -> Card-Container -> Card -> Card-info -> Card-Image */
+.card .card-image {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+.card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider -> Card-Container -> Card -> Card-info -> Prod-Info */
+.card .prod-info {
+    height: 100px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+.prod-info p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.prod-info .prod-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Slider -> Card-Container -> Card -> Add-to-Cart */
+.card .add-to-cart {
+    height: 48px;
+    background-color: rgb(2, 56, 137);
+    color: white;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    transition: all 0.5s ease;
+    font-family: var(--header-font, sans-serif);
+}
+.card .add-to-cart .cart {
+    position: absolute;
+    left: 63%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.card .add-to-cart:hover {
+    background-color: #034EC0;
+    padding-right: 35px;
+}
+.card .add-to-cart:hover .cart {
+    opacity: 1;
+}
+
+
+/* About Us */
+#about-us{
+    width: 100%;
+}
+#about-us .about-content{
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    gap: 5vw;
+    width: 100%;
+}
+#about-us p{
+    font-size: 20px;
+    font-family: 'Roboto';
+}
+#about-us img{
+    width: 300px;
+    object-fit: fill;
+    height: auto;
+    background-color: bisque;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+/* Contact-Us: Same styling as about-us */
+#contact-us{
+    width: 100%;
+}
+#contact-us .contact-content{
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+    width: 100%;
+}
+#contact-us p{
+    font-size: 25px;
+    font-family: 'Roboto';
+}
+#contact-us #maps{
+    width: 700px;
+    height: 500px;
+}
+#contact-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+#social-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+}
+#social-number{
+    display: flex;
+    gap: 10px;
+}
+#social-media{
+    display: flex;
+    gap:25px;
+}
+#social-info li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+#social-info  img{
+    object-fit: contain;
+    width: 35px;
+}
+#social-info .whatsapp img{
+    width: 50px;
+}
+
