@@ -1,39 +1,47 @@
-<!-- E-Commerce Website: Party Supply Store -->
+# Funshine – Party Supplies E-commerce
 
+**Live Demo:** _coming soon_  
+**Tech Stack:** PHP, MySQL, JavaScript, HTML/CSS
 
+## 🛍 Features
+- Dynamic product showcase (Best Sellers, New Arrivals)
+- Product detail pages
+- Add to Cart (no checkout yet)
+- Admin panel:
+  - Add/Edit/Delete products & categories
+  - Visual stats (optional future)
+- Category system (many-to-many)
+- Ratings & Reviews (per user per product)
 
-<!-- DATABASES -->
-<!-- Product Database -->
-- Product ID, Name, Photo, Description
-- Price, Stock
-- Date Created(Added): To know newly added products
-- Categories (from categoris database)
-- Ratings, Number of Ratings, Reviews, with customer ID (from Review Database)
+## 🗂 Database Schema
+- `products`: prod_id, name, img, desc, price, stock, created_at, rating, ...
+- `categories`: category_id, name
+- `product_categories`: many-to-many link
+- `reviews`: user_id, prod_id, rating, text, date
+- `users`: id, name, email, phone, password (hashed)
+- `cart`: user_id, prod_id, quantity
+- `orders`: order_id, customer_id, products, status, payment
 
-<!-- Review Database -->
-Product_Reviews: review_id, product_id, user_id, rating, review_text, review_date
+## 🚀 Setup
+1. Clone repo
+2. Import SQL file into MySQL
+3. Configure `/config/db_connect.php`
+4. Run server (`php -S localhost:8000`)
 
-<!-- Category Database -->
-<!-- Not necessarily needed -->
--category id, category name
-<!-- product catgeories -->
-- product id, category id
-- many to many
-- Product name, categories in it
-<!--  -->
-- And some visualization(statistics) for categories
+## 📈 To-Do
+- [ ] Implement login system
+- [ ] Improve cart logic per user
+- [ ] Create checkout (dummy) flow
+- [ ] Add filtering, search, and product tags
+- [ ] Add charts for admin insights
 
-<!-- Orders -->
-- Order ID
-- Customer ID
-- Products ID, Quantities Purchased for each product
-- Order date
-- Delivery Date, Delivery Status
-- Payment Status, Payment Method
+---
 
-<!-- Users -->
-- User ID, name, phone number, email, password(hashed)
-- Ongoing Orders, Past Orders(And rating, reviews of it) (Get from Orders database)
-- Cart List: cartID, [productID, price(from products table)], quantity
+Let me know if you want help with:
+- Admin dashboard charts
+- Login/auth system
+- Better cart UI
+- Product filters
+- Full DB design diagram (ERD)
 
-<!-- Cart List -->
+Want me to help build any of these next features?
